@@ -7,6 +7,8 @@ cd path/to/your/proj
 
 git clone https://github.com/iminif/html-replace-webpack-plugin-howto.git
 
+cd html-replace-webpack-plugin-howto
+
 npm install
 
 npm run test
