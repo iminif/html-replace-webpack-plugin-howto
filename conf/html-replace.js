@@ -2,21 +2,20 @@
 const res = {
   js:
   {
-    jquery: '//cdn/jquery/jquery.min.js',
-    tether: '//cdn/tether/tether.min.js',
-    bootstrap: '//cdn/bootstrap/bootstrap.min.js',
+    jquery: 'http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
+    tether: 'http://cdn.bootcss.com/tether/1.3.7/js/tether.min.js',
+    bootstrap: 'http://cdn.bootcss.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js',
     // ...
   },
   css:
   {
-    tether: '//cdn/tether/tether.min.css',
-    bootstrap: '//cdn/bootstrap/bootstrap.min.css',
+    tether: 'http://cdn.bootcss.com/tether/1.3.7/css/tether.min.css',
+    bootstrap: 'http://cdn.bootcss.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css',
     // ...
   },
   img:
   {
-    foo: '//cdn/img/foo.jpg',
-    bar: '//cdn/img/bar.jpg',
+    algodones: 'http://www.iminif.com/public/pic/algodones-dunes-1654439_640.jpg',
     // ...
   }
 }
@@ -29,23 +28,19 @@ const tpl = {
 
 module.exports = [
 {
-  regex: 'foo',
+  pattern: 'foo',
   replacement: '`foo` has been replaced with `bar`'
 },
 {
-  regex: '@@title',
-  replacement: 'html replace webpack plugin'
+  pattern: '@@title',
+  replacement: 'html-replace-webpack-plugin'
 },
 {
-  regex: '@@js~app',
-  replacement: './src/app.js'
+  pattern: '@@plaintext=whatis',
+  replacement: 'Using html-replace-webpack-plugin'
 },
 {
-  regex: '@@plaintext=whatis',
-  replacement: 'This is a test for using the html-replace-webpack-plugin'
-},
-{
-  regex: /(<!--\s*|@@)(css|js|img):([\w-\/]+)(\s*-->)?/g,
+  pattern: /(<!--\s*|@@)(css|js|img):([\w-\/]+)(\s*-->)?/g,
   replacement: function(match, $1, type, file, $4, index, input)
   {
     var url = res[type][file]

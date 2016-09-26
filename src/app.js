@@ -1,2 +1,4 @@
-document.write('It works...')
-console.log('It works...')
+$(function()
+{
+  $('#test').text('It works with jQuery fine...')
+})

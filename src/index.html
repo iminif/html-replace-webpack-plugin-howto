@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>@@title</title>
-      <!-- css:tether -->
-      <!-- css:bootstrap -->
-      <link rel="stylesheet" type="text/css" href="@@css:iconfont">
-    </head>
 
-    <body>
-      <h1>
-          <!-- @@plaintext=whatis -->
-      </h1>
+<head>
+  <meta charset="UTF-8">
+  <title>@@title</title>
+  <!-- css:tether -->
+  <!-- css:bootstrap -->
+</head>
 
-      <div>foo</div>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="p-y-1" style="color:#963">@@plaintext=whatis</h1>
+        <h2 id="test"></h2>
+        <h5>foo</h5>
+      </div>
+    </div>
+  </div>
 
-      <!-- js:jquery -->
-      <!-- js:tether -->
-      <!-- js:bootstrap -->
-      <script type="text/javascript" src="@@js~app"></script>
-    </body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card-group">
+          <div class="card">
+            <img class="card-img-top" width="100%" src="@@img:algodones" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Replace the &lt;img&gt; src</h4>
+              <p class="card-text">
+<pre><code>
+// Before replace
+&lt;img src="@@img<var>:</var>algodones"&gt;
+
+// After replacing
+&lt;img src="@@img:algodones"&gt;
+
+</code></pre>
+              </p>
+              <p class="card-text"><small class="text-muted">2016/9/26 html-replace-webpack-plugin</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- js:jquery -->
+  <!-- js:tether -->
+  <!-- js:bootstrap -->
+</body>
+
 </html>
