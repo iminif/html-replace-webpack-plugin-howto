@@ -7,6 +7,7 @@
     "test": "node test"
   },
   "devDependencies": {
+    "babel-loader": "^6.2.4",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",
     "html-replace-webpack-plugin": "^2.3.0",
