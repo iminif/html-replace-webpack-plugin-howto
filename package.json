@@ -1,0 +1,33 @@
+{
+  "name": "html-replace-webpack-plugin-howto",
+  "version": "1.0.0",
+  "description": "Help you to use html-replace-webpack-plugin clearly.",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "gulp-webpack": "^1.5.0",
+    "html-loader": "^0.4.4",
+    "html-replace-webpack-plugin": "^2.3.0",
+    "html-webpack-plugin": "^2.22.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iminif/html-replace-webpack-plugin.git"
+  },
+  "keywords": [
+    "html",
+    "replace",
+    "webpack",
+    "plugin",
+    "howto",
+    "usage"
+  ],
+  "author": "Nathanie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iminif/html-replace-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/iminif/html-replace-webpack-plugin-howto#readme"
+}
