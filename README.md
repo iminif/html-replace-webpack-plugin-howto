@@ -2,13 +2,6 @@
 For learning to use the [html-replace-webpack-plugin] more helpful
 
 ## Usage:
-
-Suppose you have a node project as follow:
-
-path/to/your/proj
-
-Then,
-
 ```shell
 cd path/to/your/proj
 

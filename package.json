@@ -1,7 +1,7 @@
 {
   "name": "html-replace-webpack-plugin-howto",
   "version": "1.0.0",
-  "description": "Help you to use html-replace-webpack-plugin clearly.",
+  "description": "Help you to use html-replace-webpack-plugin for details.",
   "main": "test.js",
   "scripts": {
     "test": "node test"
