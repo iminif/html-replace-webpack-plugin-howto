@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "eventsource-polyfill": "^0.9.6",
+    "express": "^4.14.0",
     "html-replace-webpack-plugin": "^2.3.0",
     "html-webpack-plugin": "^2.22.0",
     "shelljs": "^0.7.4",
