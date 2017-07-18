@@ -1,6 +1,6 @@
 {
   "name": "html-replace-webpack-plugin-howto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Help you to use html-replace-webpack-plugin for details.",
   "main": "test.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "babel-loader": "^6.2.4",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",
-    "html-replace-webpack-plugin": "^2.3.0",
+    "html-replace-webpack-plugin": "^2.2.4",
     "html-webpack-plugin": "^2.22.0",
     "shelljs": "^0.7.4",
     "webpack": "^1.13.2",

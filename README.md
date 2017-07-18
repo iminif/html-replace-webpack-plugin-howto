@@ -3,7 +3,7 @@ For learning to use the [html-replace-webpack-plugin] more helpful
 
 ## Usage:
 ```shell
-cd path/to/your/proj
+cd path/to/your/project
 
 git clone https://github.com/iminif/html-replace-webpack-plugin-howto.git
 

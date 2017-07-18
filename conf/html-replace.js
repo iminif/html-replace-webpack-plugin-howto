@@ -15,7 +15,7 @@ const res = {
   },
   img:
   {
-    algodones: 'http://www.iminif.com/public/pic/algodones-dunes-1654439_640.jpg',
+    nicePicture: 'https://s-media-cache-ak0.pinimg.com/originals/66/c9/29/66c929793de375c12c37ab4c9aabb093.jpg',
     // ...
   }
 }
