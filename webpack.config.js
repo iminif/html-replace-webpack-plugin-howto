@@ -7,20 +7,17 @@ var htmlReplaceConfig = require('./conf/html-replace')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry:
-  {
+  entry: {
     app: path.resolve(__dirname, 'src/app.js')
   },
-  output:
-  {
+  output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash:7].js'
   },
   devtool: '#eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin(
-    {
+    new HtmlWebpackPlugin({
       title: 'Foo',
       filename: 'index.html',
       template: 'src/index.html',
@@ -34,10 +31,8 @@ module.exports = {
       webpack.optimize.OccurrenceOrderPlugin)(),
     new webpack.NoErrorsPlugin()
   ],
-  module:
-  {
-    loaders: [
-    {
+  module: {
+    loaders: [{
       test: /\.js$/,
       loader: 'babel',
       indclude: [
@@ -47,8 +42,7 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
-  resolve:
-  {
+  resolve: {
     extensions: ['', '.js']
   }
 }
