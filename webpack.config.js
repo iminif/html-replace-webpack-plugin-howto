@@ -1,12 +1,16 @@
 var path = require('path')
 var webpack = require('webpack')
 
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
 var htmlReplaceConfig = require('./conf/html-replace')
 
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+function ReloadPlugin(options) {}
+ReloadPlugin.prototype.apply = () => {}
 
 module.exports = {
+  mode: 'development',
+  devtool: 'source-map',
   entry: {
     app: path.resolve(__dirname, 'src/app.js')
   },
@@ -14,9 +18,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash:7].js'
   },
-  devtool: '#eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new ReloadPlugin(),
     new HtmlWebpackPlugin({
       title: 'Foo',
       filename: 'index.html',
@@ -26,23 +31,20 @@ module.exports = {
       chunks: 'all',
       chunksSortMode: 'auto'
     }),
-    new HtmlReplaceWebpackPlugin(htmlReplaceConfig),
-    new(webpack.optimize.OccurenceOrderPlugin ||
-      webpack.optimize.OccurrenceOrderPlugin)(),
-    new webpack.NoErrorsPlugin()
+    new HtmlReplaceWebpackPlugin(htmlReplaceConfig)
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel',
-      indclude: [
-        path.resolve(__dirname, 'src'),
-        path.resolve(__dirname, 'test')
-      ],
-      exclude: /node_modules/
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'test')],
+        exclude: [path.resolve(__dirname, 'node_modules')],
+        options: {}
+      }
+    ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js', '.jsx', '.json', '.css']
   }
 }
