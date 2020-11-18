@@ -20,4 +20,4 @@ npm i
 npm run dev
 ```
 
-[html-replace-webpack-plugin]: https://github.com/html-replace-webpack-plugin
+[html-replace-webpack-plugin]: https://github.com/iminif/html-replace-webpack-plugin
